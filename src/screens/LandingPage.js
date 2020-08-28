@@ -9,8 +9,11 @@ import Location from '../components/Location'
 import Footer from '../components/Footer'
 
 export default function LandingPage() {
+  // get data from the reducer once API call is made
+  // pass data specific to each component as props
   const sportsData = useSelector(appState => appState.reducer.sportsData);
 
+  // call the API when page loads
   useEffect(() => {
     getSportsData()
   }, [])

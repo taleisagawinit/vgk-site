@@ -1,12 +1,14 @@
 import store from './store.js';
 import axios from 'axios';
 
+
+// get data from API
 export function getSportsData() {
   axios.get('https://www.thesportsdb.com/api/v1/json/1/searchteams.php?t=vegas_golden_knights')
     .then(res => {
       const data = res.data.teams[0]
 
-      // separate the data needed in each section, so I don't pass ALL the data to each component unneccesarily
+      // separate the data needed in each component, so I don't pass ALL the data to each component unneccesarily
       const headerData = {
         strTeamFanart3: data.strTeamFanart3,
         strTeamLogo: data.strTeamLogo
@@ -31,6 +33,7 @@ export function getSportsData() {
         strYoutube: data.strYoutube
       }
 
+      // dispatch data to the reducer
       store.dispatch({
         type: 'GET_SPORTS_DATA',
         payload: {
