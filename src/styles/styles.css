@@ -2,6 +2,7 @@ html, body {
   margin: 0;
   background-color: #fafafa;
   font-family: sans-serif;
+  overflow-x: hidden;
 }
 
 /*********************** GENERAL TAG STYLES **********************/
@@ -14,8 +15,6 @@ a, a:visited {
 a:hover {
   text-decoration: underline;
 }
-
-
 
 
 /*********************** HEADER SECTION - LARGE LAPTOP **********************/
@@ -185,7 +184,11 @@ a:hover {
 }
 
 
+
 @media (max-width: 1300px) {
+
+
+  /*********************** ABOUT - SMALL LAPTOP STYLES **********************/
   #about {
     margin-left: 10%;
     margin-right: 10%;
@@ -195,6 +198,7 @@ a:hover {
     width: 100%;
   }
 
+  /*********************** LOCATION - SMALL LAPTOP STYLES **********************/
   #location {
     flex-direction: column-reverse;
   }
@@ -209,12 +213,69 @@ a:hover {
   }
 }
 
+
+
+
 @media (max-width: 1000px) {
+
+  /*********************** ABOUT - TABLET STYLES **********************/
+
   .jersey-img img {
     width: 300px;
   }
 
+  /*********************** LOCATION - TABLET STYLES **********************/
   .stadium-img img {
     width: 100%
+  }
+}
+
+@media (max-width: 700px) {
+  /*********************** HEADER - PHONE STYLES **********************/
+  #header {
+    height: 70vh;
+  }
+
+  .header-logo {
+    width: 250px;
+  }
+
+    /*********************** ABOUT - PHONE STYLES **********************/
+  #about {
+    flex-direction: column-reverse;
+    text-align: center;
+    margin: 15%;
+  }
+
+  .about-content {
+    margin-top: 10%;
+  }
+
+  .jersey-img {
+    display: flex;
+    justify-content: center;
+  }
+
+
+    /*********************** LOGO SECTION - PHONE STYLES **********************/
+
+  #logo-section {
+    height: 65vh;
+  }
+
+  .logo-img img {
+    width: 225px;
+  }
+
+
+    /*********************** LOCATION - PHONE STYLES **********************/
+  .location-content {
+    text-align: center;
+  }
+
+    /*********************** FOOTER - PHONE STYLES **********************/
+
+  #footer {
+    padding: 15% 10%;
   }
 }
